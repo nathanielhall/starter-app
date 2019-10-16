@@ -1,9 +1,8 @@
 # React Starter App
 
-I'm in the process of creating my own recipe for starter apps. This is a work in
-progress! I hope to finish it up soon.
+The main purpose of this app is to experiment with the following technologies.
 
-Recipe
+Technologies
 
 - React
 - Babel(transpiler)
@@ -32,7 +31,7 @@ npm i -D typescript
 
 Create new file, _tsconfig.json_, and add configuration
 
-```
+```js
 
 {
   "compilerOptions": {
@@ -76,7 +75,7 @@ npm i -D @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-r
 
 Create a new file, _.babelrc_, and add configuration
 
-```
+```js
 {
   "presets": [
     [
@@ -123,7 +122,7 @@ Create new file, webpack.config.js
 
 Configure
 
-```
+```js
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const APP_PATH = path.resolve(__dirname, 'src')
@@ -175,19 +174,18 @@ npm i -D eslint-plugin-prettier eslint-config-prettier eslint-plugin-import esli
 
 Create file, _.eslintrc.js_, and add configuration
 
-```
+```js
 module.exports = {
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
-    plugins: ["typescript"],
+    plugins: ['typescript'],
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
   rules: {
-    "no-unexpected-multiline": "error"
-  }
-};
-
+    'no-unexpected-multiline': 'error',
+  },
+}
 ```
 
 ### Resources:
