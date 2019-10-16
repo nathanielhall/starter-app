@@ -1,8 +1,6 @@
 # React Starter App
 
-The main purpose of this app is to experiment with the following technologies.
-
-Technologies
+The main purpose of this app is to experiment with the following technologies:
 
 - React
 - Babel(transpiler)
