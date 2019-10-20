@@ -18,7 +18,7 @@ such as a large community, TSLint can be ruled out as an option for me.
 - [TSLint in 2019](https://medium.com/palantir/tslint-in-2019-1a144c2317a9)
 - [The future of TypeScript on ESLint](https://eslint.org/blog/2019/01/future-typescript-eslint)
 
-So, lets compare typescript-eslint and babel-eslint. The big difference here is
+So, I'll compare typescript-eslint and babel-eslint. The big difference here is
 the transpiler used.
 
 ### Articles comparing Babel & TypeScript
@@ -33,7 +33,7 @@ the transpiler used.
 
 [How to setup Jest with Babel](https://www.wisdomgeek.com/development/web-developmenthow-to-setup-jest-typescript-babel-webpack-project/)
 
-## Steps
+## My Steps
 
 ### Packages
 
@@ -42,7 +42,6 @@ the transpiler used.
 - TypeScript (Type-Checker)
 - ESLint
 - Webpack
-- Jest & React Testing Library (coming soon)
 
 -D, --save-dev: Package will appear in your devDependencies <br> -P,
 --save-prod: Package will appear in your dependencies
