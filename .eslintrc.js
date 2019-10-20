@@ -28,8 +28,8 @@ module.exports = {
   rules: {
     'no-unexpected-multiline': 'error',
     'react/prop-types': 'off',
-    'react/jsx-indent': [2, 2],
-    'react/no-unused-prop-types': 2,
+    'react/jsx-indent': ['error', 'error'],
+    'react/no-unused-prop-types': 'error',
     'react-hooks/rules-of-hooks': 'error',
   },
 }

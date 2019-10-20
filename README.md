@@ -1,6 +1,43 @@
 # React Starter App
 
-The main purpose of this app is to experiment with the following technologies:
+## Purpose
+
+> The purpose of this repo is to create a starter app for future projects. In
+> doing so, I plan to research the various options, and note my findings.
+
+### Linting
+
+Options
+
+- TSLint (will be deprecated soon)
+- typescript-eslint (transpile using TypeScript)
+- [babel-eslint](https://www.npmjs.com/package/babel-eslint) (transpile using
+  Babel)
+
+Since TSLint is being deprecated soon and using ESLint provides many benefits
+such as a large community, TSLint can be ruled out as an option for me.
+
+- [TSLint in 2019](https://medium.com/palantir/tslint-in-2019-1a144c2317a9)
+- [The future of TypeScript on ESLint](https://eslint.org/blog/2019/01/future-typescript-eslint)
+
+So, lets compare typescript-eslint and babel-eslint. The big difference here is
+the transpiler used.
+
+### Articles comparing Babel & TypeScript
+
+- [TypeScript and Babel 7 \| TypeScript](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
+- [TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
+
+- [Choosing between babel and typescript](https://blog.logrocket.com/choosing-between-babel-and-typescript-4ed1ad563e41/)
+- [Github - Experimenting with babel..](https://github.com/manuelbieh/experimenting-with-babel-7-typescript-and-eslint)
+
+### Testing
+
+[How to setup Jest with Babel](https://www.wisdomgeek.com/development/web-developmenthow-to-setup-jest-typescript-babel-webpack-project/)
+
+## Steps
+
+### Packages
 
 - React
 - Babel(transpiler)
@@ -9,8 +46,8 @@ The main purpose of this app is to experiment with the following technologies:
 - Webpack
 - Jest & React Testing Library (coming soon)
 
--D, --save-dev: Package will appear in your devDependencies -P, --save-prod:
-Package will appear in your dependencies
+-D, --save-dev: Package will appear in your devDependencies <br> -P,
+--save-prod: Package will appear in your dependencies
 
 ### Step 1: Install React and TypeScript
 
@@ -175,25 +212,39 @@ Create file, _.eslintrc.js_, and add configuration
 ```js
 module.exports = {
   parser: 'babel-eslint',
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
+  },
   parserOptions: {
     plugins: ['typescript'],
     ecmaVersion: 2018,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true, // Allows for the parsing of JSX
+    },
   },
+  extends: [
+    'eslint:recommended',
+    'prettier',
+    'prettier/react',
+    'plugin:react/recommended',
+  ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  plugins: ['react', 'react-hooks', 'import', 'prettier'],
   rules: {
     'no-unexpected-multiline': 'error',
+    'react/prop-types': 'off',
+    'react/jsx-indent': [2, 2],
+    'react/no-unused-prop-types': 2,
+    'react-hooks/rules-of-hooks': 'error',
   },
 }
 ```
 
 ### Resources:
-
-[TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
-
-[TypeScript and Babel 7 \| TypeScript](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
-
-[GitHub - microsoft/TypeScript-Babel-Starter: A sample setup using Babel CLI to build TypeScript code, and using TypeScript for type-checking.](https://github.com/microsoft/TypeScript-Babel-Starter/)
-
-[GitHub - manuelbieh/experimenting-with-babel-7-typescript-and-eslint: I want to use Babel features but with TypeScript for type checking. This seems to be an issue.](https://github.com/manuelbieh/experimenting-with-babel-7-typescript-and-eslint)
-
-[GitHub - a-tarasyuk/react-webpack-typescript-babel: A sample setup using React, Webpack and Babel to build TypeScript code, and using TypeScript for type-checking.](https://github.com/a-tarasyuk/react-webpack-typescript-babel)

@@ -6,8 +6,9 @@ module.exports = {
   entry: APP_PATH,
 
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[hash].js',
+    publicPath: '/',
   },
 
   resolve: {
