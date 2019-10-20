@@ -1,7 +1,5 @@
 # React Starter App
 
-## Purpose
-
 > The purpose of this repo is to create a starter app for future projects. In
 > doing so, I plan to add notes on the various topics I had to research.
 
