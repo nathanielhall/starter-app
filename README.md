@@ -3,7 +3,7 @@
 ## Purpose
 
 > The purpose of this repo is to create a starter app for future projects. In
-> doing so, I plan to research the various options, and note my findings.
+> doing so, I plan to add notes on the various topics I had to research.
 
 ### Linting
 
