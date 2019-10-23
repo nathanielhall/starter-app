@@ -1,4 +1,4 @@
-# Starter App
+# Starter App using Babel
 
 > The purpose of this repository is to setup a starter app for evaluating the
 > pros/cons of using babel as a transpiler. I've read compelling reasons for
@@ -8,33 +8,30 @@
 
 ## Babel: Pros
 
+- Access to the babel ecosystem (e.g., plugins, macros)
+- Use babel-preset-env to easily target specific environments
 - Move away from all the modules designed around interpreting TypeScript (e.g.,
   ts-node, ts-jest, tslint, ts-loader)
-- Use babel-preset-env to easily target specific environments
-- Access to the babel ecosystem (e.g., plugins, macros)
+
+[TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
 
 ## Babel: Cons
 
-- There are certain constructs that don’t currently compile in Babel 7 such as
-  namespaces and enums
-  - _This may be a deal-breaker for some. Here is a list of those constructs_
+- There are certain constructs that don’t currently compile in Babel 7.
+  - namespaces
+  - bracket style type assertions (e.g., `<FooBar>x`, so use as keyword instead)
+  - const enum
+  - legacy import/export
 - TypeScript is still needed for tasks such as reading .d.ts files and ensuring
   types are compatible.
   - _@todo - evaluate if this can be resolved using `tsc --watch`_
 - Babel will compile regardless of whether type errors are present.
   - _@todo: not sure if this is good/bad - do more research_
-- According to a Microsoft Blog, using the TypeScript compiler is still the
-  preferred way to build TypeScript
-  - _@todo: determine if there are reasons outside what I've listed here_
 
-#### Articles
+* [TypeScript and Babel 7 \| TypeScript](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
+* [Choosing between babel and typescript](https://blog.logrocket.com/choosing-between-babel-and-typescript-4ed1ad563e41/)
 
-- [TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
-- [TypeScript and Babel 7 \| TypeScript](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
-- [Choosing between babel and typescript](https://blog.logrocket.com/choosing-between-babel-and-typescript-4ed1ad563e41/)
-- [Github - Experimenting with babel..](https://github.com/manuelbieh/experimenting-with-babel-7-typescript-and-eslint)
-
-## Linting with Babel
+## Linting
 
 Some options for TypeScript
 
@@ -43,7 +40,7 @@ Some options for TypeScript
 
 _@todo - what are pros/cons of each_
 
-## Testing with Babel (without ts-jest)
+## Testing (without ts-jest)
 
 _@todo: why not ts-jest?_ <br> _@todo: notes describing an overview of this
 setup_
