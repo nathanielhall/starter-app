@@ -48,12 +48,6 @@ _@todo - what are pros/cons of each_
 
 ### Packages
 
-- React
-- Babel(transpiler)
-- TypeScript (Type-Checker)
-- ESLint / Babel-ESLint
-- Webpack
-
 -D, --save-dev: Package will appear in your devDependencies <br> -P,
 --save-prod: Package will appear in your dependencies
 
