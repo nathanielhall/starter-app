@@ -21,6 +21,9 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+        options: {
+          cacheDirectory: true,
+        },
       },
     ],
   },

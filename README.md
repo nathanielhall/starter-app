@@ -42,10 +42,7 @@ _@todo - what are pros/cons of each_
 
 ## Testing (without ts-jest)
 
-_@todo: why not ts-jest?_ <br> _@todo: notes describing an overview of this
-setup_
-
-[How to setup Jest with Babel](https://www.wisdomgeek.com/development/web-developmenthow-to-setup-jest-typescript-babel-webpack-project/)
+[How to setup Jest in a TypeScript, Babel and Webpack project](https://www.wisdomgeek.com/development/web-development/how-to-setup-jest-typescript-babel-webpack-project/)
 
 ## My Steps
 
@@ -257,3 +254,50 @@ module.exports = {
   },
 }
 ```
+
+### Step 6: Setup Testing Framework
+
+#### Update babel configuration
+
+```js
+module.exports = api => {
+  const isTest = api.env('test')
+
+  api.cache(true)
+
+  return {
+    presets: [
+      '@babel/preset-react',
+      '@babel/preset-typescript',
+      [
+        '@babel/preset-env',
+        {
+          targets: {
+            browsers: ['last 2 versions'],
+          },
+          modules: isTest ? 'commonjs' : false,
+        },
+      ],
+    ],
+  }
+}
+```
+
+#### Install
+
+jest
+
+```js
+npm i -D jest @types/jest
+```
+
+react-test-renderer
+
+```
+npm i -D react-test-renderer @types/react-test-renderer
+```
+
+#### Resolve linting issues
+
+At this point you may notice `no-undef` errors when using Jest (e.g., describe,
+it, expect).

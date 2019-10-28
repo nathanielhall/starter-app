@@ -8,7 +8,8 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build": "webpack --progress --colors --mode=production",
     "start": "webpack-dev-server --config webpack.config.js --progress --colors --open --mode=development",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest"
   },
   "keywords": [
     "react",
@@ -29,8 +30,10 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^24.0.20",
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
+    "@types/react-test-renderer": "^16.9.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
@@ -41,8 +44,10 @@
     "eslint-plugin-react-hooks": "^2.1.2",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-test-renderer": "^16.11.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
