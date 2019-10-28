@@ -297,7 +297,14 @@ react-test-renderer
 npm i -D react-test-renderer @types/react-test-renderer
 ```
 
-#### Resolve linting issues
+#### ESLint Configuration
 
-At this point you may notice `no-undef` errors when using Jest (e.g., describe,
-it, expect).
+Add `jest: true`
+
+```js
+  env: {
+    ...
+    jest: true,
+  },
+
+```
