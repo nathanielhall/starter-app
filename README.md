@@ -10,8 +10,8 @@
 
 - Access to the babel ecosystem (e.g., plugins, macros)
 - Use babel-preset-env to easily target specific environments
-- Move away from all the modules designed around interpreting TypeScript (e.g.,
-  ts-node, ts-jest, tslint, ts-loader)
+- Move away from all the ts-x node modules (e.g., ts-node, ts-jest, tslint,
+  ts-loader) and use the babel support instead
 
 [TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
 
@@ -19,14 +19,15 @@
 
 - There are certain constructs that don’t currently compile in Babel 7.
   - namespaces
-  - bracket style type assertions (e.g., `<FooBar>x`, so use as keyword instead)
+  - bracket style type assertions (e.g., `<FooBar>x`, so use `as` keyword
+    instead)
   - const enum
   - legacy import/export
 - TypeScript is still needed for tasks such as reading .d.ts files and ensuring
   types are compatible.
   - _@todo - evaluate if this can be resolved using `tsc --watch`_
 - Babel will compile regardless of whether type errors are present.
-  - _@todo: not sure if this is good/bad - do more research_
+  - _@todo: this could have advantages as well_
 
 * [TypeScript and Babel 7 \| TypeScript](https://devblogs.microsoft.com/typescript/typescript-and-babel-7/)
 * [Choosing between babel and typescript](https://blog.logrocket.com/choosing-between-babel-and-typescript-4ed1ad563e41/)
