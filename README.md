@@ -10,8 +10,8 @@
 
 - Access to the babel ecosystem (e.g., plugins, macros)
 - Use babel-preset-env to easily target specific environments
-- Move away from all the ts-x node modules (e.g., ts-node, ts-jest, tslint,
-  ts-loader) and use the babel support instead
+- Move away from all the ts-x (e.g., ts-node, ts-jest, tslint, ts-loader) and
+  use the babel support instead
 
 [TypeScript With Babel: A Beautiful Marriage](https://iamturns.com/typescript-babel/)
 
