@@ -4,26 +4,26 @@ module.exports = {
     es6: true,
     browser: true,
     node: true,
-    jest: true,
+    jest: true
   },
   parserOptions: {
     plugins: ['typescript'],
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true, // Allows for the parsing of JSX
-    },
+      jsx: true // Allows for the parsing of JSX
+    }
   },
   extends: [
     'eslint:recommended',
     'prettier',
     'prettier/react',
-    'plugin:react/recommended',
+    'plugin:react/recommended'
   ],
   settings: {
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   },
   plugins: ['react', 'react-hooks', 'import', 'prettier'],
   rules: {
@@ -31,6 +31,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-indent': [2, 2],
     'react/no-unused-prop-types': 2,
-    'react-hooks/rules-of-hooks': 'error',
-  },
+    'react-hooks/rules-of-hooks': 'error'
+  }
 }
