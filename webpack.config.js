@@ -8,30 +8,30 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js',
-    publicPath: '/',
+    publicPath: '/'
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.js', '.jsx', '.json']
   },
 
   module: {
     rules: [
       {
-        test: /\.(ts|js)x?$/,
+        test: /\.(js)x?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
         options: {
-          cacheDirectory: true,
-        },
-      },
-    ],
+          cacheDirectory: true
+        }
+      }
+    ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.join(APP_PATH, 'index.html'),
-    }),
-  ],
+      template: path.join(APP_PATH, 'index.html')
+    })
+  ]
 }

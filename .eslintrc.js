@@ -7,7 +7,6 @@ module.exports = {
     jest: true
   },
   parserOptions: {
-    plugins: ['typescript'],
     ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {

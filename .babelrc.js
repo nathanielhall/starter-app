@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api) => {
   const isTest = api.env('test')
 
   api.cache(true)
@@ -6,16 +6,15 @@ module.exports = api => {
   return {
     presets: [
       '@babel/preset-react',
-      '@babel/preset-typescript',
       [
         '@babel/preset-env',
         {
           targets: {
-            browsers: ['last 2 versions'],
+            browsers: ['last 2 versions']
           },
-          modules: isTest ? 'commonjs' : false,
-        },
-      ],
-    ],
+          modules: isTest ? 'commonjs' : false
+        }
+      ]
+    ]
   }
 }
