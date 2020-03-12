@@ -10,9 +10,15 @@ module.exports = {
     filename: '[name].[hash].js',
     publicPath: '/'
   },
+  devtool: 'source-map',
 
   resolve: {
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      components: path.resolve(__dirname, './src/components/'),
+      src: path.resolve(__dirname, './src/'),
+      'react-dom': '@hot-loader/react-dom'
+    }
   },
 
   module: {
@@ -27,7 +33,6 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,

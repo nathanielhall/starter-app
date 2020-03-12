@@ -10,7 +10,7 @@ module.exports = (api) => {
         '@babel/preset-env',
         {
           targets: {
-            browsers: ['last 2 versions']
+            esmodules: true
           },
           modules: isTest ? 'commonjs' : false
         }
